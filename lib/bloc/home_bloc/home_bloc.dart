@@ -1,15 +1,13 @@
 import 'package:bloc_concurrency/bloc_concurrency.dart';
-import 'package:dio/dio.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_shared/bloc/home_cubit/home_event.dart';
-import 'package:flutter_shared/bloc/home_cubit/home_state.dart';
 import 'package:flutter_shared/mixins/network/error_handling.dart';
 import 'package:flutter_shared/mixins/toast.dart';
 import 'package:flutter_shared/model/character.dart';
 import 'package:flutter_shared/model/res/character_res.dart';
 import 'package:flutter_shared/provider/character_provider.dart';
 import 'package:stream_transform/stream_transform.dart';
+import 'home_event.dart';
+import 'home_state.dart';
 
 class HomeBloc extends Bloc<HomeEvent,HomeState> {
 
@@ -19,8 +17,7 @@ class HomeBloc extends Bloc<HomeEvent,HomeState> {
     };
   }
 
-  final BuildContext context;
-  HomeBloc({required this.context}) : super(HomeLoadingState()){
+  HomeBloc() : super(HomeLoadingState()){
     on<LoadDataEvent>((event, emit)async{
       try{
         emit(HomeLoadingState());

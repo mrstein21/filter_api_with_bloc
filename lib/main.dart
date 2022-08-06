@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_shared/bloc/home_cubit/home_bloc.dart';
 import 'package:flutter_shared/ui/home/home_screen.dart';
 import 'bloc/filter_dialog_cubit/filter_dialog_cubit.dart';
+import 'bloc/home_bloc/home_bloc.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-            create:((context) => HomeBloc(context: context))
+            create:((context) => HomeBloc())
         ),
         BlocProvider(
             create:((context) => FilterDialogCubit())

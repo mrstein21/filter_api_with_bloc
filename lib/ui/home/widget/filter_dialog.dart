@@ -7,8 +7,8 @@ import 'package:flutter_shared/ui/widget/rounded_drop_down.dart';
 import 'package:flutter_shared/ui/widget/rounded_textform.dart';
 import '../../../bloc/filter_dialog_cubit/filter_dialog_cubit.dart';
 import '../../../bloc/filter_dialog_cubit/filter_dialog_state.dart';
-import '../../../bloc/home_cubit/home_bloc.dart';
-import '../../../bloc/home_cubit/home_event.dart';
+import '../../../bloc/home_bloc/home_bloc.dart';
+import '../../../bloc/home_bloc/home_event.dart';
 import '../../../mixins/constant/color.dart';
 
 class FilterDialog extends StatelessWidget {

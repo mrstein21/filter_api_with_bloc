@@ -1,15 +1,15 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_shared/bloc/filter_dialog_cubit/filter_dialog_cubit.dart';
-import 'package:flutter_shared/bloc/home_cubit/home_bloc.dart';
-import 'package:flutter_shared/bloc/home_cubit/home_event.dart';
-import 'package:flutter_shared/bloc/home_cubit/home_state.dart';
+import 'package:flutter_shared/bloc/home_bloc/home_bloc.dart';
+import 'package:flutter_shared/bloc/home_bloc/home_state.dart';
 import 'package:flutter_shared/ui/home/widget/filter_dialog.dart';
 import 'package:flutter_shared/ui/home/widget/loading_section.dart';
 import 'package:flutter_shared/ui/home/widget/no_data_section.dart';
 import 'package:flutter_shared/ui/home/widget/row_character.dart';
 import 'package:flutter_shared/ui/home/widget/section_header.dart';
+
+import '../../bloc/home_bloc/home_event.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
